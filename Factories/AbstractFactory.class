@@ -1,0 +1,49 @@
+
+package Factories;
+
+public class AbstractFactory {
+
+    private AbstractFactory() {
+    }
+
+    // param st type of stone we want to create
+    // return factory which produces stones of given type
+
+    public static ConcreteStoneFactory getStoneFactory(StoneType st) {
+
+        if (st == StoneType.DIAMOND) {
+            return new DiamondFactory();
+        }
+
+        if (st == StoneType.RUBY) {
+            return new RubyFactory();
+        }
+
+        if (st == StoneType.SAPPHIRE) {
+            return new SapphireFactory();
+        }
+
+        if (st == StoneType.TOPAZ) {
+            return new TopazFactory();
+        }
+
+        if (st == StoneType.EMERALD) {
+            return new EmeraldFactory();
+        }
+
+        if (st == StoneType.AGATE) {
+            return new AgateFactory();
+        }
+
+        if (st == StoneType.AMETHYST) {
+            return new AmethystFactory();
+        }
+
+        if (st == StoneType.BLOODSTONE) {
+            return new BloodstoneFactory();
+        }
+        return null;
+    }
+
+}
+
